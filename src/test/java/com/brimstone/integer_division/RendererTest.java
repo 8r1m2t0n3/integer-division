@@ -1,13 +1,12 @@
-package com.foxminded.task4;
+package com.brimstone.integer_division;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
-
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class IntegerDivisionVisualTest extends IntegerDivisionVisual {
+class RendererTest extends Renderer {
 
 	@Test
 	void convertDivisionResultToString_shouldReturnCorrectMainsolvingTheProblemAndConvertingItToArray() {
@@ -22,7 +21,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 12, 25, 2, 3 }, 
 				new int[] { 24, 1, 3, 4 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_78945|4\n"
 				+ " 4    |-----\n" /* offset1 = 0 */
 				+ " -    |19736\n"
@@ -54,7 +53,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 90, 100, 3, 3 },
 				new int[] { 90, 10, 4, 4 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_100000|90\n"
 				+ "  90   |----\n" /* offset1 = 1 */
 				+ "  --   |1111\n"
@@ -80,7 +79,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 10, 100,  }, 
 				new int[] { 10, 0, 0, 1 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_1000|10\n"
 				+ " 10  |---\n"
 				+ " --  |100\n"
@@ -97,7 +96,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 10, 100 }, 
 				new int[] { 10, 1, 0, 3 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_1001|10\n"
 				+ " 10  |---\n"
 				+ " --  |100\n"
@@ -115,7 +114,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 8, 20, 1, 1 },
 				new int[] { 20, 0, 1, 2 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_10000|4\n"
 				+ "  8   |----\n"
 				+ "  -   |2500\n"
@@ -136,7 +135,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 8, 20, 1, 1 },
 				new int[] { 20, 1, 1, 4 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_10001|4\n"
 				+ "  8   |----\n"
 				+ "  -   |2500\n"
@@ -156,7 +155,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 245, 1 }, 
 				new int[] { 245, 0, 0, 2 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_245|245\n"
 				+ " 245|---\n"
 				+ " ---|1\n"
@@ -175,7 +174,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 40, 35, 1, 2 },
 				new int[] { 35, 0, 2, 3 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_2435|5\n"
 				+ " 20  |---\n"
 				+ " --  |487\n"
@@ -201,7 +200,7 @@ class IntegerDivisionVisualTest extends IntegerDivisionVisual {
 				new int[] { 2, 14, 2, 2 },
 				new int[] { 14, 0, 2, 3 }));
 		
-		assertEquals(
+		Assertions.assertEquals(
 				  "_2434|2\n"
 				+ " 2   |----\n"
 				+ " -   |1217\n"

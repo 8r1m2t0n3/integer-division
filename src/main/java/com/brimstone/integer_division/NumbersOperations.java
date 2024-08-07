@@ -1,4 +1,4 @@
-package com.foxminded.task4;
+package com.brimstone.integer_division;
 
 public class NumbersOperations {
 	protected static int countOfDigitsInNumber(int number) {
