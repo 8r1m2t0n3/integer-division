@@ -3,22 +3,22 @@ package com.brimstone.integer_division;
 public class DivisionVector {
 
   public int quotient;
-  public int curDividend;
-  public int curRemain;
+  public int currentDividend;
+  public int currentRemainder;
   public int divisionResultOffset;
   public int subtractionResultOffset;
 
-  DivisionVector() {
+  public DivisionVector() {
     quotient = -1;
-    curDividend = -1;
-    curRemain = -1;
+    currentDividend = -1;
+    currentRemainder = -1;
     divisionResultOffset = -1;
     subtractionResultOffset = -1;
   }
 
-  DivisionVector(int[] result) {
-    curDividend = result[0];
-    curRemain = result[1];
+  public DivisionVector(int[] result) {
+    currentDividend = result[0];
+    currentRemainder = result[1];
     divisionResultOffset = result[2];
     subtractionResultOffset = result[3];
   }

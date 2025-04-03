@@ -3,7 +3,7 @@ package com.brimstone.integer_division;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class IntegerDivisionMain {
+public class Main {
 
   private static final Renderer RENDERER = new Renderer();
   private static final Calculator CALCULATOR = new Calculator();
@@ -20,9 +20,9 @@ public class IntegerDivisionMain {
       System.out.println();
 
       System.out.print(
-          RENDERER.convertDivisionResultToString(dividend, divisor,
+          RENDERER.divisionResultToString(dividend, divisor,
               new ArrayList<>(
-                  CALCULATOR.solvingTheProblemAndConvertingItToArray(dividend, divisor))));
+                  CALCULATOR.solve(dividend, divisor))));
 
     }
   }

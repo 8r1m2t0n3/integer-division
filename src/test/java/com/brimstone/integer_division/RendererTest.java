@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class RendererTest extends Renderer {
 
 	@Test
-	void convertDivisionResultToString_shouldReturnCorrectMainsolvingTheProblemAndConvertingItToArray() {
+	void divisionResultToString_shouldReturnCorrectMainsolvingTheProblemAndConvertingItToArray() {
 		int dividend = 78945;
 		int divisor = 4;
 		
@@ -38,11 +38,11 @@ class RendererTest extends Renderer {
 				+ "    24\n"       /* offset1 = 3 */
 				+ "    --\n"
 				+ "     1\n",      /* offset2 = 4 */    
-				convertDivisionResultToString(dividend, divisor, divisionResult));
+				divisionResultToString(dividend, divisor, divisionResult));
 	}
 	
 	@Test
-	void convertDivisionResultToString_allNumbersShouldBePlacedWithOffset() {
+	void divisionResultToString_allNumbersShouldBePlacedWithOffset() {
 		int dividend = 100000;
 		int divisor = 90;
 		
@@ -67,11 +67,11 @@ class RendererTest extends Renderer {
 				+ "     90\n"      /* offset1 = 4 */
 				+ "     --\n"
 				+ "     10\n",     /* offset2 = 4 */
-				convertDivisionResultToString(dividend, divisor, divisionResult));
+				divisionResultToString(dividend, divisor, divisionResult));
 	}
 	
 	@Test
-	void convertDivisionResultToString_shouldPlaceZeroUnderLastNumberInProblem_whenProblemContainsFourLinesAndRemainderEqualsToZero() {
+	void divisionResultToString_shouldPlaceZeroUnderLastNumberInProblem_whenProblemContainsFourLinesAndRemainderEqualsToZero() {
 		int dividend = 1000;
 		int divisor = 10;
 
@@ -84,11 +84,11 @@ class RendererTest extends Renderer {
 				+ " 10  |---\n"
 				+ " --  |100\n"
 				+ "  0\n", 
-				convertDivisionResultToString(dividend, divisor, divisionResult));
+				divisionResultToString(dividend, divisor, divisionResult));
 	}
 	
 	@Test
-	void convertDivisionResultToString_shouldPlaceOneUnderLastDigitOfDividend_whenProblemContainsFourLinesAndRemainderDoesNotEqualsToZero() {
+	void divisionResultToString_shouldPlaceOneUnderLastDigitOfDividend_whenProblemContainsFourLinesAndRemainderDoesNotEqualsToZero() {
 		int dividend = 1001;
 		int divisor = 10;
 
@@ -101,11 +101,11 @@ class RendererTest extends Renderer {
 				+ " 10  |---\n"
 				+ " --  |100\n"
 				+ "    1\n", 
-				convertDivisionResultToString(dividend, divisor, divisionResult));
+				divisionResultToString(dividend, divisor, divisionResult));
 	}
 	
 	@Test
-	void convertDivisionResultToString_shouldPlaceZeroUnderLastNumberInProblem_whenProblemContainsMoreThenFourLinesAndRemainderEqualsToZero() {
+	void divisionResultToString_shouldPlaceZeroUnderLastNumberInProblem_whenProblemContainsMoreThenFourLinesAndRemainderEqualsToZero() {
 		int dividend = 10000;
 		int divisor = 4;
 
@@ -122,11 +122,11 @@ class RendererTest extends Renderer {
 				+ "  20\n"
 				+ "  --\n"
 				+ "   0\n", 
-				convertDivisionResultToString(dividend, divisor, divisionResult));
+				divisionResultToString(dividend, divisor, divisionResult));
 	}
 	
 	@Test
-	void convertDivisionResultToString_shouldPlaceLastRemainderUnderLastDigitOfDividendNumber_whenProblemContainsMoreThenFourLinesAndRemainderDoesNotEqualsToZero() {
+	void divisionResultToString_shouldPlaceLastRemainderUnderLastDigitOfDividendNumber_whenProblemContainsMoreThenFourLinesAndRemainderDoesNotEqualsToZero() {
 		int dividend = 10001;
 		int divisor = 4;
 
@@ -143,11 +143,11 @@ class RendererTest extends Renderer {
 				+ "  20\n"
 				+ "  --\n"
 				+ "     1\n", 
-				convertDivisionResultToString(dividend, divisor, divisionResult));
+				divisionResultToString(dividend, divisor, divisionResult));
 	}
 	
 	@Test
-	void convertDivisionResultToString_shouldReturnCorrectSolution_whenProblemIsToDivideEqualNumbers() {
+	void divisionResultToString_shouldReturnCorrectSolution_whenProblemIsToDivideEqualNumbers() {
 		int dividend = 245;
 		int divisor = 245;
 
@@ -160,11 +160,11 @@ class RendererTest extends Renderer {
 				+ " 245|---\n"
 				+ " ---|1\n"
 				+ "   0\n", 
-				convertDivisionResultToString(dividend, divisor, divisionResult));
+				divisionResultToString(dividend, divisor, divisionResult));
 	}
 	
 	@Test
-	void convertDivisionResultToString_shouldPlaceZeroUnderLastNumberInProblem_whenSolutionOfProblemContainsMoreThenFourLinesAndReminderIsZero() {
+	void divisionResultToString_shouldPlaceZeroUnderLastNumberInProblem_whenSolutionOfProblemContainsMoreThenFourLinesAndReminderIsZero() {
 		int dividend = 2435;
 		int divisor = 5;
 
@@ -185,11 +185,11 @@ class RendererTest extends Renderer {
 				+ "   35\n"
 				+ "   --\n"
 				+ "    0\n", 
-				convertDivisionResultToString(dividend, divisor, divisionResult));
+				divisionResultToString(dividend, divisor, divisionResult));
 	}
 	
 	@Test
-	void convertDivisionResultToString_shouldPlaceZeroUnderLastNumberInProblem_whenLastLinesHasSameOffset() {
+	void divisionResultToString_shouldPlaceZeroUnderLastNumberInProblem_whenLastLinesHasSameOffset() {
 		int dividend = 2434;
 		int divisor = 2;
 		
@@ -214,6 +214,6 @@ class RendererTest extends Renderer {
 				+ "   14\n"
 				+ "   --\n"
 				+ "    0\n", 
-						convertDivisionResultToString(dividend, divisor, divisionResult));
+						divisionResultToString(dividend, divisor, divisionResult));
 	}
 }
